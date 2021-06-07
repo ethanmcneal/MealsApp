@@ -4,20 +4,19 @@ import MealCard from "../components/MealCard";
 import { CATEGORIES, MEALS } from "../data/dummy-data";
 
 const MealsScreen = (props) => {
-
-const navigateToMealDetails = (id) => {
-        props.navigation.navigate({
-            routeName: "MealDetails",
-            params: {
-                mealId: id,
-            },
-        });
-    };
+	const navigateToMealDetails = (id) => {
+		props.navigation.navigate({
+			routeName: "MealDetails",
+			params: {
+				mealId: id,
+			},
+		});
+	};
 	const renderMeal = (itemData) => {
 		return (
 			<MealCard
 				itemData={itemData}
-                navigateToMealDetails={navigateToMealDetails}
+				navigateToMealDetails={navigateToMealDetails}
 			/>
 		);
 	};
