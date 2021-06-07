@@ -3,10 +3,12 @@ import { StyleSheet, Text, View, Button } from 'react-native'
 
 
 const MealDetailScreen = (props) => {
+
+    const mealId = props.navigation.getParam("mealId");
     return(
         <View style={styles.screen}>
             <Text>
-                meal deets screen
+                meal deets screen {mealId}
             </Text>
             <Button title="go back to categories" onPress={() => props.navigation.popToTop()}/>
         </View>

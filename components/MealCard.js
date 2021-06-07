@@ -9,10 +9,13 @@ import {
 
 
 
+
 const MealCard = (props) => {
+
+
 	return (
 		<View style={styles.container}>
-			<TouchableOpacity onPress={props.onSelectMeal}>
+			<TouchableOpacity onPress={() => props.navigateToMealDetails(props.itemData.item.id)}>
 				<View>
 					<View style={{ ...styles.header, ...styles.row }}>
 						<ImageBackground
