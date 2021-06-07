@@ -12,10 +12,18 @@ import {
 
 const MealCard = (props) => {
 
+    const navigateToMealDetails = (id) => {
+		props.navigation.navigate({
+			routeName: "MealDetails",
+			params: {
+				mealId: id,
+			},
+		});
+	}
 
 	return (
 		<View style={styles.container}>
-			<TouchableOpacity onPress={() => props.navigateToMealDetails(props.itemData.item.id)}>
+			<TouchableOpacity onPress={() => navigateToMealDetails(props.itemData.item.id)}>
 				<View>
 					<View style={{ ...styles.header, ...styles.row }}>
 						<ImageBackground
