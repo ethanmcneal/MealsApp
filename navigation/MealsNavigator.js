@@ -24,6 +24,12 @@ const MealsNavigator = createStackNavigator(
 				backgroundColor:
 					Platform.OS === "android" ? Colors.primaryColor : "white",
 			},
+            headerTitleStyle: {
+                fontFamily: 'bold-sans'
+            },
+            headerBackTitleStyle: {
+                fontFamily: 'open-sans'
+            },
 			headerTintColor:
 				Platform.OS === "android" ? "white" : Colors.primaryColor,
 		},
@@ -41,6 +47,12 @@ const FavoritesNavigator = createStackNavigator(
 				backgroundColor:
 					Platform.OS === "android" ? Colors.primaryColor : "white",
 			},
+            headerTitleStyle: {
+                fontFamily: 'bold-sans'
+            },
+            headerBackTitleStyle: {
+                fontFamily: 'open-sans'
+            },
 			headerTintColor:
 				Platform.OS === "android" ? "white" : Colors.primaryColor,
 		},
@@ -94,6 +106,12 @@ const FiltersNavigator = createStackNavigator({
         headerStyle: {
             backgroundColor:
                 Platform.OS === "android" ? Colors.primaryColor : "white",
+        },
+        headerTitleStyle: {
+            fontFamily: 'bold-sans'
+        },
+        headerBackTitleStyle: {
+            fontFamily: 'open-sans'
         },
         headerTintColor:
             Platform.OS === "android" ? "white" : Colors.primaryColor,
