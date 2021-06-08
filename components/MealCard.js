@@ -6,6 +6,7 @@ import {
 	TouchableOpacity,
 	ImageBackground,
 } from "react-native";
+import DefaultText from "./DefaultText";
 
 
 
@@ -30,19 +31,19 @@ const MealCard = (props) => {
 							source={{ uri: props.itemData.item.imageUrl }}
 							style={styles.bgImage}
 						>
-							<Text style={styles.title} numberOfLines={1}>
+							<DefaultText style={styles.title} numberOfLines={1}>
 								{props.itemData.item.title}
-							</Text>
+							</DefaultText>
 						</ImageBackground>
 					</View>
 					<View style={{ ...styles.row, ...styles.detail }}>
-						<Text style={styles.detailText}>{props.itemData.item.duration}m</Text>
-						<Text style={styles.detailText}>
+						<DefaultText style={styles.detailText}>{props.itemData.item.duration}m</DefaultText>
+						<DefaultText style={styles.detailText}>
 							{props.itemData.item.complexity}
-						</Text>
-						<Text style={styles.detailText}>
+						</DefaultText>
+						<DefaultText style={styles.detailText}>
 						    {props.itemData.item.affordability}
-						</Text>
+						</DefaultText>
 					</View>
 				</View>
 			</TouchableOpacity>
