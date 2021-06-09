@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { StyleSheet, Switch, Text, View } from "react-native";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import CustomHeaderButton from "../components/HeaderButton";
@@ -17,11 +17,28 @@ const FilterSwitch = props => {
     )
 }
 
+
 const FiltersScreen = (props) => {
+    const {navigation} = props
 	const [glutenFree, setGlutenFree] = useState(false);
     const [vegan, setVegan] = useState(false);
     const [lactoseFree, setLactoseFree] = useState(false);
     const [vegetarian, setVegetarian] = useState(false);
+
+    useEffect(() => {
+        navigation.setParams({save: saveFilters});
+    },[saveFilters])
+
+
+    const saveFilters = useCallback(() => {
+        const appliedFilters = {
+            glutenGree: glutenFree,
+            vegan: vegan,
+            lactoseFree: lactoseFree,
+            vegetarian: vegetarian
+        }
+        console.log(appliedFilters)
+    }, [glutenFree, vegan, lactoseFree, vegetarian])
 	return (
 		<View style={styles.screen}>
 			<Text style={styles.title}>Filters</Text>
@@ -58,7 +75,9 @@ const styles = StyleSheet.create({
 	},
 });
 FiltersScreen.navigationOptions = (navData) => {
+    console.log(navData)
 	return {
+        
 		headerTitle: "Filter Meals",
 		headerLeft: () => {
 			return (
@@ -71,7 +90,19 @@ FiltersScreen.navigationOptions = (navData) => {
 				</HeaderButtons>
 			);
 		},
-	};
+        headerRight: () => {
+			return (
+				<HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
+					<Item
+						title="Save"
+						iconName="ios-save"
+						onPress={navData.navigation.getParam('save')}
+					/>
+				</HeaderButtons>
+        	)
+        ;
+	}
+}
 };
 
 export default FiltersScreen;
