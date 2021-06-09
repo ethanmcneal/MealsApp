@@ -1,10 +1,7 @@
 import React from "react";
 import {
 	StyleSheet,
-	Text,
 	FlatList,
-	View,
-	TouchableOpacity,
 } from "react-native";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import CategoryCard from "../components/CategoryCard";

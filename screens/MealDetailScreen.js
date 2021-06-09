@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, ScrollView, Image } from "react-native";
+import { StyleSheet, Text, View, ScrollView, Image } from "react-native";
 import { MEALS } from "../data/dummy-data";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import CustomHeaderButton from "../components/HeaderButton";
