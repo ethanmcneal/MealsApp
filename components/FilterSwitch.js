@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Switch, Text, View } from 'react-native'
+import Colors from '../constants/Colors'
 const FilterSwitch = props => {
     return(
         <View style={styles.filterContainer}>
