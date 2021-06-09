@@ -42,18 +42,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 	},
-	filterContainer: {
-		flexDirection: "row",
-		alignItems: "center",
-		justifyContent: "space-between",
-		width: "80%",
-        marginVertical: 20,
-        borderTopWidth: 1,
-        borderBottomWidth: 1,
-        borderColor: '#ccc',
-        padding: 12,
-        
-	},
 	title: {
 		fontFamily: "bold-sans",
 		fontSize: 22,
