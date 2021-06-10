@@ -18,7 +18,7 @@ const FiltersScreen = (props) => {
     
     const saveFilters = useCallback(() => {
         const appliedFilters = {
-            glutenGree: glutenFree,
+            glutenFree: glutenFree,
             vegan: vegan,
             lactoseFree: lactoseFree,
             vegetarian: vegetarian
