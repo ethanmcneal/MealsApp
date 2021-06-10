@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
+import FilterSwitch from "../components/FilterSwitch";
 import CustomHeaderButton from "../components/HeaderButton";
 
 
