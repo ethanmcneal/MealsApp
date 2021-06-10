@@ -5,6 +5,7 @@ import {
 	TouchableOpacity,
 	ImageBackground,
 } from "react-native";
+import {useSelector} from 'react-redux'
 import DefaultText from "./DefaultText";
 
 
@@ -12,12 +13,15 @@ import DefaultText from "./DefaultText";
 
 const MealCard = (props) => {
 
+    const favoriteMeals = useSelector(state => state.meals.favoriteMeals);
+    const isFav = favoriteMeals.some(meal => meal.id === props.itemData.item.id)
     const navigateToMealDetails = (id) => {
 		props.navigation.navigate({
 			routeName: "MealDetails",
 			params: {
 				mealId: id,
-                mealTitle: props.itemData.item.title
+                mealTitle: props.itemData.item.title,
+                isFav: isFav
 			},
 		});
 	}
