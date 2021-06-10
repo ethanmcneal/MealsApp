@@ -3,7 +3,7 @@ import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import CustomHeaderButton from "../components/HeaderButton";
 import MealList from "../components/MealList";
 import {useSelector} from 'react-redux'
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import DefaultText from "../components/DefaultText";
 
 const FavoritesScreen = (props) => {
